@@ -64,6 +64,10 @@ void Error_Handler(void);
 #define SD_DETECT_GPIO_Port GPIOF
 #define LED_PF7_Pin GPIO_PIN_7
 #define LED_PF7_GPIO_Port GPIOF
+#define ADC_IN1_Pin GPIO_PIN_4
+#define ADC_IN1_GPIO_Port GPIOA
+#define VBUS_DETECT_Pin GPIO_PIN_6
+#define VBUS_DETECT_GPIO_Port GPIOG
 #define USB_PULLUP_Pin GPIO_PIN_8
 #define USB_PULLUP_GPIO_Port GPIOG
 #define BUTTON_PB8_Pin GPIO_PIN_8

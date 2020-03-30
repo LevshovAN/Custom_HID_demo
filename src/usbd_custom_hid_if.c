@@ -124,17 +124,32 @@ __ALIGN_BEGIN static uint8_t CUSTOM_HID_ReportDesc_FS[USBD_CUSTOM_HID_REPORT_DES
     0x15, 0x00,                    //   LOGICAL_MINIMUM (0)
     0x26, 0xff, 0x00,              //   LOGICAL_MAXIMUM (255)
     0x75, 0x08,                    //   REPORT_SIZE (8)
-    0x95, ARRAY2ST,                    //   REPORT_COUNT (N)
+    0x95, ARRAY2ST,                //   REPORT_COUNT (N)
     0xb1, 0x82,                    //   FEATURE (Data,Var,Abs,Vol)
     0x85, 0x03,                    //   REPORT_ID (3)
     0x09, 0x03,                    //   USAGE (Vendor Usage 3)
     0x91, 0x82,                    //   OUTPUT (Data,Var,Abs,Vol)
 
+   //Кнопки
     0x85, 0x04,                    //   REPORT_ID (4)
     0x09, 0x04,                    //   USAGE (Vendor Usage 4)
     0x75, 0x08,                    //   REPORT_SIZE (8)
-    0x95, ARRAY2HOST,                    //   REPORT_COUNT (N)
+    0x95, ARRAY2HOST,              //   REPORT_COUNT (N)
     0x81, 0x82,                    //   INPUT (Data,Var,Abs,Vol)
+		
+    //ADC_IN1/
+    0x85, 0x05,            /*     REPORT_ID (5)              */         
+    0x09, 0x05,            /*     USAGE (ADC_IN1)             */          
+    0x15, 0x00,            /*     LOGICAL_MINIMUM (0)        */               
+    0x26, 0xff, 0x03,      /*     LOGICAL_MAXIMUM (255)      */                 
+    0x75, 0x08,            /*     REPORT_SIZE (8)            */           
+    0x95, 0x01,              //   REPORT_COUNT (N)
+    0x81, 0x82,            /*     INPUT (Data,Var,Abs,Vol)   */
+		
+    0x85, 0x05,            /*     REPORT_ID (5)              */                 
+    0x09, 0x05,            /*     USAGE (ADC in)             */                     
+    0xb1, 0x82,            /*     FEATURE (Data,Var,Abs,Vol) */  		
+		
   /* USER CODE END 0 */
   0xC0    /*     END_COLLECTION	             */
 };
